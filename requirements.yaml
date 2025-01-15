@@ -1,0 +1,22 @@
+name: comPASS
+channels:
+  - bioconda
+  - defaults
+  - conda-forge
+dependencies:
+  - biopython=1.76=py36h516909a_0
+  - coreutils=8.25=1
+  - curl=7.77.0=hea6ffbf_0
+  - deeptools=3.5.1=py_0
+  - deeptoolsintervals=0.1.9=py36hc5360cc_3
+  - homer=4.11=pl5262h7d875b9_4
+  - htslib=1.13=h9093b5e_0
+  - macs2=2.2.7.1=py36hc5360cc_2
+  - numpy=1.19.5=py36h2aa4a07_1
+  - pairtools=0.3.0=py36h5a693b3_5
+  - pandas=1.1.5=py36h284efc9_0
+  - python=3.6.8=h0371630_0
+  - perl=5.26.2=h14c3975_0
+  - pybigwig=0.3.18=py36h0c3496a_1
+  - r-base=4.4.1
+  - scipy=1.5.3=py36h976291a_0
