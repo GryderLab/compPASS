@@ -69,6 +69,8 @@ done
 
 g=$GENEREF
 n="sample_a,sample_b"
+n1=$(cut -d "," -f 1 $n)
+n2=$(cut -d "," -f 2 $n)
 f="1,1"
 r="F"
 o="results"
@@ -142,7 +144,7 @@ echo "Reading from input bam files, please be patient ..."
 Rscript $SCRIPTSOURCE"/generate_comparison_table_from_multicov.R" $shortout "gene_coverage.bed" $f ${pro_start} ${tssr_start} ${gene_start} ${tesr_end}
 
 # STEP 5: Uses Log2FC table to classify genes and draw plots(Raw data output + Visual outputs)
-Rscript $SCRIPTSOURCE"/classify_genes_from_pol2_states.R" $shortout "comparison_tb.tsv" 
+Rscript $SCRIPTSOURCE"/classify_genes_from_pol2_states.R" $shortout "comparison_tb.tsv" $GCT $n1 $n2
 
 # STEP 6: Uses provided gene_categories table to further classify genes (Raw data output + Visual outputs)
 #echo "Step 6: Classifying genes of interest according to ${GCT} ... "

@@ -2,10 +2,11 @@
 # Yaw Asante | yxa181@case.edu | January 15th, 2025 | Gryder Lab, CWRU
 
 # source functions
-source("funct_compas.R")
+source("funct_compass.R")
 
 ### Global Variables
 NUMREGIONS=4 # number of ROIs for read capture 
+NUMCOLS=7 # number of total data columns for each sample
 
 # reads column
 SAMPLEA.COL <- 7
@@ -48,7 +49,7 @@ if(length(prescan_scalefactors) < 2){
 # capture each line of array by jumping 4 at a time
 
 input.tb <- read.table(paste0(project_dir,"/",source_file_name), sep="\t",header=F)
-
+s
 # sanity check, resort by chr, gene-name and coordinates
 input.tb <- input.tb[order(input.tb[,1], input.tb[,5], input.tb[,2]),]
 
@@ -81,7 +82,7 @@ while(k <= dim(input.tb)[1]){
 	k <- k + NUMREGIONS
 }
 results.tb <- as.data.frame(results.tb)
-colnames(results.tb) <- c(paste0(hdr, rep(1,NUMREGIONS)), paste0(hdr, rep(2,NUMREGIONS)), paste0(rep("L2FC_",NUMREGIONS), hdr))
+colnames(results.tb) <- c("GeneID","RegionLength", paste0(hdr, rep(1,NUMCOLS)), paste0(hdr, rep(2,NUMCOLS)), paste0(rep("L2FC_",NUMCOLS), hdr))
 
 # write out full table to output
 write.table(results.tb, file=paste0(project_dir,"/comparison_tb.tsv", row.names=F, col.names=T, quote=F, sep="\t")
