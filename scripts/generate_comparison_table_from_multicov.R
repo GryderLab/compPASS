@@ -49,7 +49,7 @@ if(length(prescan_scalefactors) < 2){
 # capture each line of array by jumping 4 at a time
 
 input.tb <- read.table(paste0(project_dir,"/",source_file_name), sep="\t",header=F)
-s
+
 # sanity check, resort by chr, gene-name and coordinates
 input.tb <- input.tb[order(input.tb[,1], input.tb[,5], input.tb[,2]),]
 

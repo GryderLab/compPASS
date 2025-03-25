@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # reference paths
 DATASOURCE="../input"
 SCRIPTSOURCE="../scripts"
@@ -16,5 +18,9 @@ gene_end=0
 tesr_start=0
 tesr_end=4000
 
+# cutoff for considering group of genes as a class
+COUNTCUTOFF=20
 # system config for downstream intensive processes (generating bigWig, matrix, profilePlots)
 PROCESSORS= 1 # more preferred
+
+# profile plot variables

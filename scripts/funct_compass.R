@@ -43,7 +43,7 @@ get_pause_ratio <- function(x, glen) {
 
 get_unloading_ratio <- function(x, glen) {
   ret_val = 0
-  tesr_len <- .GlobalEnv$tesr_end
+  tesr_len <- .GlobalEnv$tesr_end + 1
   if (x[4] != 0) {
     ret_val <- (x[3]/(glen+ 1)) / (x[4]/tesr_len)
   }
@@ -68,6 +68,7 @@ isLoOutlier <- function(x){
   return(x <= (low.bd-(1*cur.iqr)))
 }
 
+
 getTukeyRangeNonNeg <- function(n.vect){
   iqr <- IQR(n.vect)
   low.val <- summary(n.vect)[2] - (2*iqr)
@@ -81,13 +82,25 @@ getTukeyRangeNonNeg <- function(n.vect){
   
 }
 
-getTukeyRange <- function(n.vect){
+getTukeyRangePick <- function(x1, x2, isNonNeg=F){
+  rng1 <- range(x1)[2] - range(x1)[1]
+  rng2 <- range(x2)[2] - range(x2)[1]
+  
+  if(rng2 > rng1){
+    return(getTukeyRange(x2, isNonNeg))
+  } else {
+    return(getTukeyRange(x1, isNonNeg))
+  }
+}
+getTukeyRange <- function(n.vect, isNonNeg=F){
+  if (isNonNeg){
+    return(getTukeyRangeNonNeg(n.vect))
+  }
   iqr <- IQR(n.vect)
   low.val <- summary(n.vect)[2] - (2*iqr)
   
   hi.val <- summary(n.vect)[5] + (2*iqr)
   return(c(low.val, hi.val))
-  
 }
 
 # generate Pol2 plots for each ROI for each version
