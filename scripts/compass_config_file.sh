@@ -4,15 +4,15 @@
 LOCATION="/mnt/vstor/SOM_GENE_BEG33/software/compPASS/"
 
 # reference paths
-DATASOURCE="/mnt/vstor/SOM_GENE_BEG33/ChIP_seq/hg38/DATA/"
+DATASOURCE="" # structure for input folders at DATASOURCE found in Zenodo data link
 SCRIPTSOURCE=$LOCATION"scripts/"
 REFSOURCE=$LOCATION"references/"
-OUTPUTDIR="/mnt/vstor/SOM_GENE_BEG33/ChIP_seq/hg38/projects/Pol2_ratios/compPASS_outs/"
+OUTPUTDIR=$LOCATION"/output/"
 GENEREF=$LOCATION"references/gene_2K_coord_hg38.tsv"
 GCT=$LOCATION"references/gene_categories_binary.txt" # adds length, class, genomic, and more(!) for characterizing genes
 
 # conda path
-CONDAPATH="/mnt/vstor/SOM_GENE_BEG33/mamba/miniforge3/envs/" # < -- SET THIS VALUE
+CONDAPATH="" # < -- SET THIS VALUE
 CONDAVAL=$CONDAPATH"compPASS" # < -- SET THIS VALUE
 
 # regions of interest for Pol2 pileup
@@ -27,8 +27,6 @@ tesr_end=4000
 
 # exclude chromosome Y? set to T if model is female-derived
 EXCLUDE_CHR_Y=T
-
-# use RNA-seq
 
 # system config for downstream intensive processes (generating bigWig, matrix, profilePlots)
 THREADCOUNT=8 # more preferred
