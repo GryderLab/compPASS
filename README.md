@@ -5,8 +5,7 @@ The compPASS pipeline allows investigators to capture the landscape of major cha
 <img width="522" height="393" alt="image" src="https://github.com/user-attachments/assets/b350ef1d-cf94-439a-92eb-1e692c07b35d" />
 
 # Workflow
-<img width="1004" height="254" alt="image" src="https://github.com/user-attachments/assets/f66c1a8e-3544-44b5-b378-a3c382fb41c4" />
-
+<img width="1016" height="263" alt="image" src="https://github.com/user-attachments/assets/ee3cb890-558e-4c67-97dd-d14cdf7c385a" />
 
 Inputs:
 - Sequencing data in BAM format from two ChIP-seq or HiChIP style experiments (ideally control and case) with total RNA Pol2 as the target.
