@@ -2,12 +2,11 @@
 
 The compPASS pipeline allows investigators to capture the landscape of major changes in RNA Polymerase II profile across the genome. The goal is to capture ratios beyond just the pausing ratio and use the identified genes to characterize the nature of the perturbation (with respect to Pol2) applied to the cells.
 
-#<img width="522" height="393" alt="image" src="https://github.com/user-attachments/assets/b350ef1d-cf94-439a-92eb-1e692c07b35d" />
+<img width="522" height="393" alt="image" src="https://github.com/user-attachments/assets/b350ef1d-cf94-439a-92eb-1e692c07b35d" />
 
 # Workflow
-#<img width="510" height="386" alt="image" src="https://github.com/user-attachments/assets/501666e8-8568-4762-a4f6-39cc26d33f73" />
+<img width="1004" height="254" alt="image" src="https://github.com/user-attachments/assets/f66c1a8e-3544-44b5-b378-a3c382fb41c4" />
 
-<img width="1100" height="663" alt="image" src="https://github.com/user-attachments/assets/5adf6ac5-2129-40e5-81c4-66d6c339c1fb" />
 
 Inputs:
 - Sequencing data in BAM format from two ChIP-seq or HiChIP style experiments (ideally control and case) with total RNA Pol2 as the target.
