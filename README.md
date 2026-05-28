@@ -10,6 +10,12 @@ The compPASS pipeline allows investigators to capture the landscape of major cha
 Inputs:
 - Sequencing data in BAM format from two ChIP-seq or HiChIP style experiments (ideally control and case) with total RNA Pol2 as the target.
 
+Installation Instructions:
+- Use the provided requirements.yaml and make a conda environment
+- conda env create -f compPASS_env.yaml
+- Then, create folders in input (or your chosen input folder) that follow the following format for both paired experiments: SAMPLE_NAME/SAMPLE_NAME.bam, SAMPLE_NAME/SAMPLE_NAME.bam.bai , SAMPLE_NAME/SAMPLE_NAME.flagstat.txt
+- If using spike-in reads, make a SAMPLE_NAME/SpikeIn/spike_map_summary file which has 1 line of headers and 1 line of the format: total reads \t human_reads \t orthogonal_reads
+
 Outputs of compPASS
 
 For each successful run of the compPASS pipeline, the user should receive:
