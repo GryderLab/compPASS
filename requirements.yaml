@@ -1,4 +1,4 @@
-name: comPASS
+name: compPASS
 channels:
   - bioconda
   - defaults
