@@ -149,8 +149,9 @@ fi
 echo ""
 echo "Step 1: Activate conda environment"
 source activate $CONDAVAL
-module load SAMtools
-module load BEDTools/2.30.0-GCC-11.2.0
+# used on cluster
+#module load SAMtools
+#module load BEDTools/2.30.0-GCC-11.2.0
 echo " - Env active."
 
 # Makes a new directory in output
