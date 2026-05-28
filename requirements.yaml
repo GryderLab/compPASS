@@ -20,3 +20,5 @@ dependencies:
   - pybigwig=0.3.18=py36h0c3496a_1
   - r-base=4.4.1
   - scipy=1.5.3=py36h976291a_0
+  - samtools==1.19.2
+  - bedtools=2.30.0
