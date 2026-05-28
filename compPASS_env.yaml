@@ -10,6 +10,7 @@ dependencies:
   - _sysroot_linux-64_curr_repodata_hack=3=haa98f57_10
   - alabaster=0.7.12=pyhd3eb1b0_0
   - babel=2.11.0=py38h06a4308_0
+  - bedtools=2.30.0
   - binutils_impl_linux-64=2.40=h5293946_0
   - biopython=1.76=py38h7b6447c_0
   - blas=2.131=openblas
@@ -189,6 +190,7 @@ dependencies:
   - r-withr=3.0.2=r44hc72bb7e_0
   - readline=8.2=h5eee18b_0
   - requests=2.32.3=py38h06a4308_0
+  - samtools=1.19.2
   - scipy=1.10.1=py38h32ae08f_1
   - sed=4.9=hb25bd0a_0
   - setuptools=75.1.0=py38h06a4308_0
